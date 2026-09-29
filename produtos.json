@@ -1,0 +1,20 @@
+[
+    {
+        "nome": "Vaso Decorativo Geométrico - PLA Silk",
+        "preco": "R$ 65,00",
+        "imagem": "https://images.unsplash.com/photo-1613587635999-73ff4270ebbe?q=80&w=600&auto=format&fit=crop",
+        "linkShopee": "https://br.shp.ee/pRZzhTLD"
+    },
+    {
+        "nome": "Suporte Minimalista para Headset",
+        "preco": "R$ 45,00",
+        "imagem": "https://images.unsplash.com/photo-1590209440625-78e72782e4e1?q=80&w=600&auto=format&fit=crop",
+        "linkShopee": "https://br.shp.ee/pRZzhTLD"
+    },
+    {
+        "nome": "Escultura Abstrata - PLA Velvet",
+        "preco": "R$ 85,00",
+        "imagem": "https://images.unsplash.com/photo-1533139396181-42bb274b5a37?q=80&w=600&auto=format&fit=crop",
+        "linkShopee": "https://br.shp.ee/pRZzhTLD"
+    }
+]

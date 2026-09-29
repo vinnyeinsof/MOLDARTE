@@ -1,94 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Básico e Avançado -->
     <title>Moldarte | Arte e Design em Impressão 3D</title>
-    <meta name="description" content="Catálogo oficial da Moldarte. Descubra peças exclusivas, vasos decorativos e suportes com design refinado, produzidos em impressão 3D de alta resolução.">
-    <meta name="keywords" content="Moldarte, Impressão 3D, Decoração 3D, PLA Silk, PLA Velvet, Vasos Decorativos, Suportes, Arte 3D, São Bernardo do Campo">
-    <meta name="author" content="Moldarte">
-    <meta name="robots" content="index, follow">
     
-    <!-- Open Graph (Compartilhamento no WhatsApp, Facebook, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.moldarte.com.br/">
-    <meta property="og:title" content="Moldarte | Arte e Design em Impressão 3D">
-    <meta property="og:description" content="Descubra peças exclusivas, produzidas em impressão 3D de alta resolução.">
-    <meta property="og:image" content="Logo MoldArte.png">
+    <!-- Favicon adicionado -->
+    <link rel="icon" type="image/png" href="Logo MoldArte.png">
     
-    <!-- Canonical Tag (Evita punição do Google por conteúdo duplicado) -->
-    <link rel="canonical" href="https://www.moldarte.com.br/">
-
-    <!-- Fontes e Estilos -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <img src="Logo MoldArte.png" alt="Logotipo Moldarte" class="logo">
+            <img src="Logo MoldArte.png" alt="Moldarte" class="logo">
             <nav class="nav-links">
                 <a href="#catalogo">Catálogo</a>
-                <a href="https://br.shp.ee/pRZzhTLD" target="_blank" rel="noopener">Shopee</a>
-                <a href="https://wa.me/c/5511922099723" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://br.shp.ee/pRZzhTLD" target="_blank">Shopee</a>
             </nav>
         </div>
     </header>
 
-    <!-- Seção Hero (Banner Principal) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Design encontra Precisão</h1>
-            <p>Peças decorativas e utilitários fabricados com a mais alta tecnologia de impressão 3D.</p>
-            <a href="#catalogo" class="btn-primary">Ver Coleção</a>
+    <!-- Banners Rotativos -->
+    <section class="carousel">
+        <!-- Slide 1 (Usando a sua Imagem de Fundo) -->
+        <div class="slide active" style="background-image: url('Imagem de Fundo.png');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <h1>Design & Precisão</h1>
+                    <p>Transformamos a sua visão em peças palpáveis com impressão 3D de alta resolução.</p>
+                    <a href="#catalogo" class="btn-primary">Explorar Coleção</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1613587635999-73ff4270ebbe?q=80&w=1920&auto=format&fit=crop');">
+            <div class="slide-overlay">
+                <div class="slide-content">
+                    <h1>Acabamento Premium</h1>
+                    <p>Materiais exclusivos como PLA Silk e Velvet para um toque de sofisticação.</p>
+                    <a href="https://br.shp.ee/pRZzhTLD" target="_blank" class="btn-primary">Visitar Loja Shopee</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controlos do Banner -->
+        <button class="prev-slide" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next-slide" onclick="moveSlide(1)">&#10095;</button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
         </div>
     </section>
 
-    <!-- Catálogo de Produtos -->
+    <!-- Catálogo -->
     <main id="catalogo" class="catalog-section">
-        <div class="section-title">
-            <h2>Nossas Peças</h2>
+        <div class="section-header">
+            <h2>O Nosso Catálogo</h2>
             <div class="divider"></div>
         </div>
         
         <div class="catalog-grid" id="product-grid">
-            <!-- Produtos injetados via JavaScript -->
+            <!-- Loader visual enquanto carrega o JSON -->
+            <div class="loader">A carregar peças exclusivas...</div>
         </div>
     </main>
 
-    <!-- Rodapé -->
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/c/5511922099723" class="whatsapp-float" target="_blank" aria-label="Contactar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <img src="Logo MoldArte.png" alt="Logotipo Moldarte" class="footer-logo">
-            <p>&copy; 2026 Moldarte. Todos os direitos reservados.</p>
-            <p>São Bernardo do Campo, SP</p>
-        </div>
+        <img src="Logo MoldArte.png" alt="Moldarte" class="footer-logo">
+        <p>&copy; 2026 Moldarte. Criado com paixão e tecnologia em São Bernardo do Campo, SP.</p>
     </footer>
 
     <script src="app.js"></script>
-    
-    <!-- Schema.org Markup para SEO Local e E-commerce -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Store",
-      "name": "Moldarte",
-      "image": "https://www.moldarte.com.br/Logo%20MoldArte.png",
-      "description": "Peças exclusivas, decorativas e suportes produzidos em impressão 3D.",
-      "url": "https://www.moldarte.com.br",
-      "telephone": "+5511922099723",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "São Bernardo do Campo",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      }
-    }
-    </script>
 </body>
 </html>
